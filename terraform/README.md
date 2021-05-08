@@ -3,8 +3,8 @@ by the end of this you will be competent in:
 * terragrunt
 * terraform
 * AWS
-** at least the basics
-** by all means use whatever cloud you wish, I just designed this with AWS in mind
+* * at least the basics
+* * by all means use whatever cloud you wish, I just designed this with AWS in mind
 
 what you will need to install
 * tfenv
@@ -14,23 +14,23 @@ what you will need to install
 
 before you start
 * setup an aws user account with access id keys for terraform to use
-** It will need to have full admin rights
-** this isn't the best solution as there is a more optimal one but that's for the bonus round :).
+* * It will need to have full admin rights
+* * this isn't the best solution as there is a more optimal one but that's for the bonus round :).
 
 assignment:
 * networking
-** holds the VPCs, Subnets, Security groups and general networking configurations
+* * holds the VPCs, Subnets, Security groups and general networking configurations
 
 * compute
-** anything compute related
-** RDS & EC2 instances
-** Loadbalancers
-** S3 can go here too
+* * anything compute related
+* * RDS & EC2 instances
+* * Loadbalancers
+* * S3 can go here too
 
 * iam_other
-** is is essentially everything that doesn't fit in the other too
-** however iam roles for instances should go in here
-** bonus round
+* * is is essentially everything that doesn't fit in the other too
+* * however iam roles for instances should go in here
+* * bonus round
 
 terragrunt
 terraform has a concept of workspaces, these are used so that the same code can
@@ -42,9 +42,9 @@ where Terragrunt comes in. It can manage workspaces write files and import varia
 You will be doing all of these.
 
 * declare locals in each all.hcl, envs.hcl & unique.hcl
-** locals in terragrunt are declared the same way as in terraform
-** however you will need to pass these locals into terraform as variables.
-** passing locals can be done as below
+* * locals in terragrunt are declared the same way as in terraform
+* * however you will need to pass these locals into terraform as variables.
+* * passing locals can be done as below
 uniq.hcl
 ```
 locals {
@@ -87,12 +87,12 @@ assignment
 * each repo needs to have it's own statefile within each workspace
 * you will probably need to create some resources from scratch but wherever possible
   use the terraform registry and github
-** terraform does the the ability to refer to remote modules
-*** module "foo" {
-***   source = "<path to git repo/terraform registry>"
-*** }
-*** if using a git repo use the http git path as the source
-*** EG: git::https://github.com/user/repo.git
+* * terraform does the the ability to refer to remote modules
+* * * module "foo" {
+* * *   source = "<path to git repo/terraform registry>"
+* * * }
+* * * if using a git repo use the http git path as the source
+* * * EG: git::https://github.com/user/repo.git
 * use modules
-** it's tempting to put everything in main.tf when learning but this is bad practice
-** wherever possible create a module and use a module
+* * it's tempting to put everything in main.tf when learning but this is bad practice
+* * wherever possible create a module and use a module

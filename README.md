@@ -16,6 +16,6 @@ Linux VM on virtual box should be fine.
 
 each repo should have a gitignore and should be running precommit
 * https://pre-commit.com/
-** pre commit allows you to do checks before commiting
-** for example you can run terraform fmt to ensure that terraform is correctly
+* * pre commit allows you to do checks before commiting
+* * for example you can run terraform fmt to ensure that terraform is correctly
    formatted

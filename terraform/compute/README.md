@@ -5,11 +5,11 @@ infrastructure
 * 1 Application Loadbalancer
 * codecommit or some other private repo
 * 1 auto scaler
-** 3 instances
-** user data in autoscaler
-*** pulls down webserver code
-*** deploys code to webserver
-*** starts web server
+* * 3 instances
+* * user data in autoscaler
+* * * pulls down webserver code
+* * * deploys code to webserver
+* * * starts web server
 
 TODO
 use packer to build the ami for the webserver
